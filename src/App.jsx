@@ -2,14 +2,16 @@ import './App.css'
 
 //components
 import Headline from './components/Headline/Headline'
-import Header from './components/Header/Header'
+import HeaderMain from './components/HeaderMain'
+import Hero from './components/Hero/Hero'
 
 function App() {
 
   return (
     <>
       <Headline />
-      <Header />
+      <HeaderMain />
+      <Hero />
     </>
   )
 }

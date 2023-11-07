@@ -1,0 +1,12 @@
+.hero-div{
+    border: 1px solid red;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container{
+    border: 1px solid green;
+    width: 80%;
+}
