@@ -1,5 +1,7 @@
 import './Hero.css'
 
+import video_img from '../../assets/banner.jpg'
+
 const Hero = () => {
   return (
     <div className='hero-div'>
@@ -15,7 +17,7 @@ const Hero = () => {
             </div>
         </div>
         <div className='video-container'>
-
+          <img src={video_img} alt='video thumbnail' className='thumbnail'/>
         </div>
       </div>
     </div>

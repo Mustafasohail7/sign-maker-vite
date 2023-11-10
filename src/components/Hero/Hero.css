@@ -1,12 +1,97 @@
 .hero-div{
-    border: 1px solid red;
-    height: 80vh;
+    height: min(80vh,500px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .hero-container{
-    border: 1px solid green;
     width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-container{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.video-container{
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.heading{
+    color: #FF79A1;
+    font-family: 'Rampart One';
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -10px;
+}
+
+.text{
+    color: #333;
+    font-family: Epilogue;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 120% */
+    letter-spacing: 0.7px;
+}
+
+.thumbnail{
+    /* width: 477px;
+    height: 363px; */
+    border-radius: 10px;
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 850px){
+    .heading{
+        font-size: 4rem;
+    }
+    .text{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .heading{
+        font-size: 3rem;
+        letter-spacing: -8px;
+    }
+    .text{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .hero-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-container{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .video-container{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .heading{
+        font-size: 2.5rem;
+        letter-spacing: -6px;
+    }
+    .text{
+        font-size: 0.8rem;
+    }
 }
