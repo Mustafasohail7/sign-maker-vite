@@ -1,12 +1,26 @@
 import './Testimonials.css'
 
+import { useState } from 'react'
+
 import fander_profile from '../../assets/michael-fander-profile.jpeg'
 import jane_profile from '../../assets/jane-doe-profile.jpeg'
 import john_profile from '../../assets/john-doe-profile.jpeg'
 
-import { AiOutlineArrowLeft,AiOutlineArrowRight } from 'react-icons/ai'
+import { PiCaretLeftBold, PiCaretRightBold } from 'react-icons/pi'
 
 const Testimonials = () => {
+
+    const [active,setAcitve] = useState(0)
+
+    const handleRightButtonClick = () => {
+        setAcitve((prevIndex) => (prevIndex + 1) % testimonial_data.length);
+    };
+    
+      const handleLeftButtonClick = () => {
+        setAcitve((prevIndex) => (prevIndex - 1 + testimonial_data.length) % testimonial_data.length);
+    };
+
+    console.log(active)
 
     const testimonial_data = [
         {id:0, image:fander_profile, name:'michael fander', testimonial:'lorem ipsum dolor sit amet, consectetuer Adipiscing elit, sed diam nonummy nibh euis-lorem ipsum dolor sit amet, consectetuer Adipiscing elit, sed diam nonummy nibh euis-lorem ipsum'},
@@ -14,23 +28,39 @@ const Testimonials = () => {
         {id:2, image:john_profile, name:'john doe', testimonial:'lorem ipsum dolor sit amet, consectetuer Adipiscing elit, sed diam nonummy nibh euis-lorem ipsum dolor sit amet, consectetuer Adipiscing elit, sed diam nonummy nibh euis-lorem ipsum'}
     ]
 
+    console.log(window.matchMedia('(max-width: 768px)').matches)
+
   return (
     <div className='testimonials-div'>
-        <div className='testimonials-button-container'>
-            <AiOutlineArrowLeft className='testimonials-button left' />
-            <div className='testimonials-container'>
-                <div className='testimonial-heading'>
-                    <h1>Testimonials</h1>
+        <div className='testimonials-container'>
+            <div className='testimonial-heading'>
+                <h1>Testimonials</h1>
+            </div>
+            <div className='testimonials-button-container'>
+                <div className='caret-container' onClick={handleLeftButtonClick}>
+                    <PiCaretLeftBold className='testimonials-button left'/>
                 </div>
                 <div className='testimonials-flex'>
                     {testimonial_data.map((testimonial) => (
                         <div key={testimonial.id} className='testimonial'>
-                            bruh
+                            <div className='testimonial-profile'>
+                                <img src={testimonial.image} alt='profile' className='testimonial-img'/>
+                            </div>
+                            <div className='testimonial-text'>
+                                <div className='testimonial-name'>
+                                    {testimonial.name}
+                                </div>
+                                <div className='testimonial-desc'>
+                                    {testimonial.testimonial}
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
+                <div className='caret-container' onClick={handleRightButtonClick}>
+                    <PiCaretRightBold className='testimonials-button right' />
+                </div>
             </div>
-            <AiOutlineArrowRight className='testimonials-button right' />
         </div>
     </div>
   )

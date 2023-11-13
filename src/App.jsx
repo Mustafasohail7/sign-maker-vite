@@ -6,6 +6,7 @@ import HeaderMain from './components/HeaderMain'
 import Hero from './components/Hero/Hero'
 import Products from './components/Products/Products'
 import Testimonials from './components/Testimonials/Testimonials'
+import ProductGallery from './components/ProductGallery/ProductGallery'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <Products />
       <Testimonials />
+      <ProductGallery />
     </>
   )
 }
