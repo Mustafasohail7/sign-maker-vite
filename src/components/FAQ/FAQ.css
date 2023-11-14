@@ -1,0 +1,141 @@
+.faq-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0px;
+}
+
+.faq-container{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-heading{
+    /* border: 1px solid green; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-heading h1{
+    color: var(--primary-color);
+    text-align: center;
+
+    font-family: Exo;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 100% */
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.faq-flex{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.faq-item-super{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.faq-item{
+    /* border: 1px solid yellow; */
+    /* margin-bottom: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+
+    cursor: pointer;
+    width: 96%;
+    align-self: flex-start;
+}
+
+.faq-question{
+    color: #000;
+    text-align: center;
+
+    /* FAQ question style */
+    font-family: Exo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 250% */
+    letter-spacing: -0.48px;
+    text-transform: uppercase;
+}
+
+.faq-dropdown-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 3px solid var(--primary-color);
+    background: #FFF;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+}
+
+.faq-dropdown-btn{
+    transition: transform 0.5s ease-in-out;
+}
+
+.faq-dropdown-btn.rotate{
+    transform: rotate(-180deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.faq-answer{
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: height 0.5s ease-in-out;
+    font-family: Exo;
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.faq-answer.visible{
+    height: min(10vh,100px);
+}
+
+@media screen and (max-width: 1148px){
+    .faq-flex{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 820px){
+    .faq-container{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .faq-container{
+        width: 80%;
+    }
+    .faq-item-super{
+        width: 100%;
+    }
+    .faq-flex{
+        gap: 0.5rem;
+    }
+    .faq-heading h1{
+        font-size: 2rem;
+    }
+}

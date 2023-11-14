@@ -7,6 +7,8 @@ import Hero from './components/Hero/Hero'
 import Products from './components/Products/Products'
 import Testimonials from './components/Testimonials/Testimonials'
 import ProductGallery from './components/ProductGallery/ProductGallery'
+import FAQ from './components/FAQ/FAQ'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
       <Products />
       <Testimonials />
       <ProductGallery />
+      <FAQ />
+      <Footer />
     </>
   )
 }
