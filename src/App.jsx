@@ -14,8 +14,10 @@ function App() {
 
   return (
     <>
-      <Headline />
-      <HeaderMain />
+      <div className='sticky-header'>
+        <Headline />
+        <HeaderMain />
+      </div>
       <Hero />
       <Products />
       <Testimonials />
