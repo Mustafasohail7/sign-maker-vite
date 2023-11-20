@@ -8,7 +8,7 @@ import { FaBars } from 'react-icons/fa'
 
 const Header = ({options,setDropDown}) => {
 
-    const [selected,setSelected] = useState(0)
+    const [selected,setSelected] = useState(1)
 
     useEffect(() => { 
         const handleScroll = () => {
